@@ -1,6 +1,6 @@
 // Add Event Listeners here:
 function handleHover() {
-  $('.cell').on('mouseover', function (event) {
+  $('.grid').on('mouseover', '.cell', function (event) {
     $(event.target).addClass('active');
   });
 }
@@ -53,6 +53,6 @@ function createAndPlaceRows(n) {
   const rows = createRows(n);
   $('.grid').html(rows);
   const cells = $('.cell');
-  handleHover();
+  // handleHover();
   cells.css({ height: cells.width() });
 }
